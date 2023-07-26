@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 
-@dataclass  # add dataclass
+@dataclass
 class InfoMessage:
     """Информационное сообщение о тренировке."""
     training_type: str
@@ -15,7 +15,7 @@ class InfoMessage:
                 f'Длительность: {self.duration:.3f} ч.; '
                 f'Дистанция: {self.distance:.3f} км; '
                 f'Ср. скорость: {self.speed:.3f} км/ч; '
-                f'Потрачено ккал: {self.calories:.3f}.')  # Добавление скобок
+                f'Потрачено ккал: {self.calories:.3f}.')
 
 
 class Training:
@@ -127,8 +127,8 @@ def read_package(workout_type: str, data: list) -> Training:
         'WLK': SportsWalking
     }
     if workout_type not in training_types.keys():
-        raise KeyError('Нет такого типа тренировки')  # добавлен  error message
-    return training_types[workout_type](*data)  # скобки убраны
+        raise KeyError('Нет такого типа тренировки')
+    return training_types[workout_type](*data)
 
 
 def main(training: Training) -> None:
