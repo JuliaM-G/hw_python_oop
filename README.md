@@ -41,7 +41,7 @@ source venv/bin/activate
 - Затем нужно установить зависимости из файла requirements.txt
 
 ```bash
-cd yatube_api
+cd hw_python_oop
 ```
 
 ```bash
